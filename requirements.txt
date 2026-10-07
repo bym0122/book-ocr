@@ -1,0 +1,2 @@
+# Runtime is mostly system packages (ocrmypdf, tesseract, poppler).
+# Keep this file for any pure-Python helpers.
