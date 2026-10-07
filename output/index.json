@@ -1,0 +1,23 @@
+{
+  "books": [
+    {
+      "source_file": "The Ultimate Guide To Text and Phone... (Z-Library).pdf",
+      "output_pdf": "book_ocr.pdf",
+      "total_pages": 166,
+      "ocr_success": 165,
+      "ocr_suspect": 1,
+      "suspect_pages": [
+        1
+      ],
+      "text_chars": 449090,
+      "chunks": 166,
+      "ocr_language": "chi_sim+eng",
+      "had_text_layer": true,
+      "ocr_mode": "pdftotext",
+      "started_at": "2026-10-07T19:52:10.927426+00:00",
+      "finished_at": "2026-10-07T19:52:13.772521+00:00",
+      "pages_dir": "pages/"
+    }
+  ],
+  "count": 1
+}
