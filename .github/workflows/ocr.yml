@@ -1,0 +1,102 @@
+name: Book OCR / EPUB Extract
+
+on:
+  push:
+    paths:
+      - "input/**"
+  workflow_dispatch:
+    inputs:
+      file:
+        description: "Optional single filename under input/ (leave empty for all)"
+        required: false
+        default: ""
+      lang:
+        description: "Tesseract languages (e.g. chi_sim+eng, chi_sim, chi_tra+eng)"
+        required: false
+        default: "chi_sim+eng"
+      force_ocr:
+        description: "Force OCR even if text layer exists (true/false)"
+        required: false
+        default: "false"
+
+concurrency:
+  group: book-ocr-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  extract:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install system packages
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            ocrmypdf \
+            tesseract-ocr \
+            tesseract-ocr-chi-sim \
+            tesseract-ocr-chi-tra \
+            tesseract-ocr-eng \
+            poppler-utils \
+            ghostscript \
+            qpdf \
+            pngquant \
+            unpaper
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install Python deps
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: List input files
+        run: |
+          echo "=== input/ ==="
+          ls -la input/ || true
+          echo "=== tesseract langs ==="
+          tesseract --list-langs || true
+
+      - name: Run extraction
+        env:
+          INPUT_FILE: ${{ github.event.inputs.file || '' }}
+          OCR_LANG: ${{ github.event.inputs.lang || 'chi_sim+eng' }}
+          FORCE_OCR: ${{ github.event.inputs.force_ocr || 'false' }}
+        run: |
+          set -euo pipefail
+          ARGS=(--lang "${OCR_LANG}")
+          if [ "${FORCE_OCR}" = "true" ]; then
+            ARGS+=(--force-ocr)
+          fi
+          if [ -n "${INPUT_FILE}" ]; then
+            ARGS+=(--file "${INPUT_FILE}")
+          fi
+          python scripts/process_book.py "${ARGS[@]}"
+
+      - name: Commit results
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add output/
+          if git diff --staged --quiet; then
+            echo "No output changes to commit."
+          else
+            git commit -m "chore: OCR/extract results $(date -u +%Y-%m-%dT%H:%MZ)"
+            git push
+          fi
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: book-ocr-output
+          path: output/
+          if-no-files-found: warn
+          retention-days: 14
