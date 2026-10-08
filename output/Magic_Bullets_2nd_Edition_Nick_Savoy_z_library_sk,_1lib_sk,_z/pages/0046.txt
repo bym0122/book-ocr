@@ -1,0 +1,48 @@
+Quick primer on evolutionary biology
+
+
+Darwin taught us how humans and other animals evolve. Animals in every generation have random
+genetic variation, and those animals whose genes are best suited for their environment tend to do a
+little better, on average, than other members of their species. Over time, the advantage of doing “a
+little better” becomes compounded, and the nature of the species changes.
+
+
+Seen in this way, each generation is a competition between different genetic makeups. The
+competition takes place extremely slowly, but evolutionary time is very long. Assuming 30 years per
+                              2
+generation, each million years allows for over 33,000 rounds of Darwin’s game.
+
+
+Let’s make a hypothetical example, starting with a world of 1,000 humans. Assume one of them was
+born with a mutation that the other 999 humans do not have: a dominant gene allowing him to eat
+trout. Most of the time, this ability would not be crucial, but on occasion trout-eating humans near
+freshwater lakes would be able to survive and reproduce while their non-trout-eating cousins would
+             3
+die of hunger . If we assume that the ability to digest trout provided a 0.1% advantage on average to a
+given human’s chances of surviving and raising healthy offspring, then, within one million years,
+99.999999999.6% of the human population would be descended from this one person in one thousand
+who had the slightly superior gene. And the gene would now be part of normal human biology.
+
+
+Much of our genetic makeup today is the result of random genetic mutations during previous
+generations. All other things being equal, a mutation that provides a genuine evolutionary advantage
+should win out over time.
+
+
+What is an evolutionary advantage? Success, in evolutionary terms, can be seen as:
+
+
+         • Surviving until he or she is old enough to reproduce.
+
+
+         • Having access to mate(s) with whom to reproduce.
+
+
+         • Having access to mate(s) with whom reproduction has a better-than-average chance of
+         producing offspring who will themselves have greater chances of evolutionary success.
+
+
+         • Reproducing frequently (but not so frequently as to cause a burden).
+
+
+         • Being able to protect and raise their offspring to maximize their chances of success.

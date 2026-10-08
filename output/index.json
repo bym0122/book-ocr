@@ -1,6 +1,46 @@
 {
   "books": [
     {
+      "source_file": "Magic_Bullets_2nd_Edition_Nick_Savoy_z_library_sk,_1lib_sk,_z.pdf",
+      "output_pdf": "book_ocr.pdf",
+      "total_pages": 328,
+      "ocr_success": 305,
+      "ocr_suspect": 23,
+      "suspect_pages": [
+        1,
+        2,
+        8,
+        24,
+        34,
+        42,
+        69,
+        81,
+        136,
+        165,
+        178,
+        183,
+        197,
+        205,
+        206,
+        220,
+        232,
+        255,
+        266,
+        277,
+        278,
+        282,
+        301
+      ],
+      "text_chars": 487564,
+      "chunks": 328,
+      "ocr_language": "chi_sim+eng",
+      "had_text_layer": true,
+      "ocr_mode": "pdftotext",
+      "started_at": "2026-10-08T05:52:29.038863+00:00",
+      "finished_at": "2026-10-08T05:52:33.920135+00:00",
+      "pages_dir": "pages/"
+    },
+    {
       "source_file": "The Ultimate Guide To Text and Phone... (Z-Library).pdf",
       "output_pdf": "book_ocr.pdf",
       "total_pages": 166,
@@ -14,10 +54,10 @@
       "ocr_language": "chi_sim+eng",
       "had_text_layer": true,
       "ocr_mode": "pdftotext",
-      "started_at": "2026-10-07T19:52:10.927426+00:00",
-      "finished_at": "2026-10-07T19:52:13.772521+00:00",
+      "started_at": "2026-10-08T05:52:33.928246+00:00",
+      "finished_at": "2026-10-08T05:52:37.192337+00:00",
       "pages_dir": "pages/"
     }
   ],
-  "count": 1
+  "count": 2
 }
