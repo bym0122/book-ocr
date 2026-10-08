@@ -1,0 +1,37 @@
+ROUTINES
+
+
+
+      Transitioning
+      Of the five different types of Transitions identified in Chapter
+      6 of Magic Bullets, only “Observational Transitions” really
+      use much in the way of routines. This type of Transition is
+      based to a large extent on cold reads, which we discussed in
+      Chapter 3. To help you build your own Observational Transitions,
+      we’ve researched one of the classic cold reading studies: the
+      Forer effect.
+
+      The Forer Effect
+      The Forer effect (also called personal validation fallacy or
+      the Barnum effect after P. T. Barnum) is the observation that
+      individuals will give high accuracy ratings to descriptions of
+      their personality that supposedly are tailored specifically for
+      them, but are in fact vague and general enough to apply
+      to a wide range of people. The Forer effect can provide a
+      partial explanation for the widespread acceptance of some
+      pseudosciences such as astrology and fortune telling, as well
+      as many types of personality tests.
+
+      Forer’s Demonstration
+
+      In 1948, psychologist Bertram R. Forer gave a personality test
+      to his students, and then gave them a personality analysis
+      supposedly based on the test’s results. He invited each of them
+      to rate the analysis on a scale of 0 (very poor) to 5 (excellent)
+      as it applied to themselves: the average was 4.26. He then
+      revealed that each student had been given the same analysis
+      (which had been assembled from horoscopes):
+
+
+      www.LoveSystems.com                                          ©2007
+156

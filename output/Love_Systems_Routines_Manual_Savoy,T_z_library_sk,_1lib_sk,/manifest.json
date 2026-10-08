@@ -1,0 +1,16 @@
+{
+  "source_file": "Love_Systems_Routines_Manual_Savoy,T_z_library_sk,_1lib_sk,.pdf",
+  "output_pdf": "book_ocr.pdf",
+  "total_pages": 199,
+  "ocr_success": 199,
+  "ocr_suspect": 0,
+  "suspect_pages": [],
+  "text_chars": 272130,
+  "chunks": 199,
+  "ocr_language": "chi_sim+eng",
+  "had_text_layer": true,
+  "ocr_mode": "pdftotext",
+  "started_at": "2026-10-08T05:55:32.529477+00:00",
+  "finished_at": "2026-10-08T05:55:35.897890+00:00",
+  "pages_dir": "pages/"
+}
